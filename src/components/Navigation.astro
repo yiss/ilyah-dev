@@ -1,0 +1,36 @@
+---
+const pages = [
+  {
+    title: "Home",
+    href: "/home",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "About Me",
+    href: "/about",
+  },
+];
+---
+
+<div class="w-full mb-4">
+  <div class="w-fit mx-auto">
+    {
+      pages.map((p) => {
+        return (
+          <>
+            <a
+              class="text-md mx-1 hover:underline"
+              href={`${p.href}`}
+            >
+              {p.title}
+            </a>
+            <span>.</span>
+          </>
+        );
+      })
+    }
+  </div>
+</div>
